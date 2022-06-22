@@ -5,7 +5,7 @@
   elements:
   - title: Summary over Time
     name: Summary over Time
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_line
     fields: [supply_forecasting_raw.sum_ordered, supply_forecasting_raw.sum_shipped,
@@ -63,7 +63,7 @@
     height: 14
   - title: "# Weeks"
     name: "# Weeks"
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: single_value
     fields: [supply_forecasting_raw.number_weeks]
@@ -128,7 +128,7 @@
     height: 4
   - title: "# SKUs"
     name: "# SKUs"
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: single_value
     fields: [supply_forecasting_raw.number_skus]
@@ -193,7 +193,7 @@
     height: 4
   - title: SKU Overview
     name: SKU Overview
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_grid
     fields: [supply_forecasting_raw.sku, supply_forecasting_raw.sum_ordered_per_week,
@@ -293,7 +293,7 @@
     height: 13
   - title: SKU Buckets
     name: SKU Buckets
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_grid
     fields: [supply_forecasting_raw.sum_ordered_per_week, supply_forecasting_raw.variance_from_sum_ordered_per_week,

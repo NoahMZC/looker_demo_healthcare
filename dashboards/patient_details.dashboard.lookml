@@ -5,7 +5,7 @@
   elements:
   - title: Patient Details
     name: Patient Details
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: single_value
     fields: [patient.name, patient.age, patient.gender, encounter__type__coding.display]
@@ -51,7 +51,7 @@
     height: 2
   - title: New Tile
     name: New Tile
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [organization.name]
@@ -86,7 +86,7 @@
     height: 2
   - title: New Tile
     name: New Tile (2)
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [organization__address.city, organization__address.state, organization__address.postal_code]
@@ -126,7 +126,7 @@
     height: 2
   - title: BMI
     name: BMI
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_line
     fields: [observation_vitals.issued_date, observation_vitals.average_quantity]
@@ -185,7 +185,7 @@
     height: 6
   - title: Blood Pressure
     name: Blood Pressure
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_line
     fields: [observation_vitals.issued_date, observation_vitals.average_quantity]
@@ -241,7 +241,7 @@
     height: 6
   - title: Temperature
     name: Temperature
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_line
     fields: [observation_vitals.issued_date, observation_vitals.average_quantity]
@@ -309,7 +309,7 @@
     height: 2
   - title: New Tile (copy)
     name: New Tile (copy)
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [organization.telecom]
@@ -348,7 +348,7 @@
     height: 2
   - title: Age
     name: Age
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: single_value
     fields: [patient.age, encounter__type__coding.display]
@@ -393,7 +393,7 @@
     height: 2
   - title: Patient Details (copy 2)
     name: Patient Details (copy 2)
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: single_value
     fields: [patient.gender, encounter__type__coding.display]
@@ -438,7 +438,7 @@
     height: 2
   - title: Primary Complaint
     name: Primary Complaint
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: single_value
     fields: [encounter__reason__coding.display]
@@ -487,7 +487,7 @@
     height: 2
   - title: Patient Details (copy 4)
     name: Patient Details (copy 4)
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: single_value
     fields: [patient.us_core_ethnicity]
@@ -547,7 +547,7 @@
     height: 3
   - title: New Tile
     name: New Tile (3)
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: single_value
     fields: [patient.is_wellness_screened_in_the_past_year, patient.id]
@@ -575,7 +575,7 @@
     height: 4
   - title: Risk of Readmission
     name: Risk of Readmission
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter_readmission_predictions.readmission_risk_score]
@@ -610,7 +610,7 @@
     height: 4
   - title: Diagnosis With Dates
     name: Diagnosis With Dates
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: looker_grid
     fields: [diagnostic_report.dateTime_date, diagnostic_report__code__coding.code,
@@ -669,7 +669,7 @@
     height: 5
   - title: Encounter Timeline
     name: Encounter Timeline
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: looker_scatter
     fields: [encounter.period__start_date, encounter.count, encounter.average_los]
@@ -751,7 +751,7 @@
     ui_config:
       type: advanced
       display: inline
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     listens_to_filters: []
     field: patient.id
@@ -764,7 +764,7 @@
     ui_config:
       type: advanced
       display: inline
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     listens_to_filters: []
     field: patient.name
@@ -778,7 +778,7 @@
       type: day_range_picker
       display: inline
       options: []
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     listens_to_filters: []
     field: observation.issued_year

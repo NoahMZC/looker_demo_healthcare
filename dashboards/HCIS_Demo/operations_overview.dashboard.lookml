@@ -4,7 +4,7 @@
   elements:
   - title: ED Wait Time
     name: ED Wait Time
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.average_los]
@@ -43,7 +43,7 @@
     height: 4
   - title: Patients (This Year)
     name: Patients (This Year)
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.count_patients]
@@ -74,7 +74,7 @@
     height: 4
   - title: Number of Encounters
     name: Number of Encounters
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.count, encounter.period__start_month]
@@ -119,7 +119,7 @@
     height: 3
   - title: Top Primary Diagnosis (and cost)
     name: Top Primary Diagnosis (and cost)
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_bar
     fields: [condition__code__coding.code, condition__code__coding.display, encounter.count,
@@ -209,7 +209,7 @@
     height: 8
   - title: Number of OP Visits
     name: Number of OP Visits
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.count, encounter.period__start_year]
@@ -244,7 +244,7 @@
     height: 4
   - title: 30-Day Readmission Rate
     name: 30-Day Readmission Rate
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: readmission
     type: single_value
     fields: [readmission.perc_30_day_readmission]
@@ -276,7 +276,7 @@
     height: 4
   - title: Readmission Causes
     name: Readmission Causes
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: readmission
     type: sankey
     fields: [prior_condition__code__coding.display, condition__code__coding.display,
@@ -317,7 +317,7 @@
     height: 8
   - title: Overdue for Wellness Screening
     name: Overdue for Wellness Screening
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: looker_column
     fields: [patient.count, patient__address.city]
@@ -378,7 +378,7 @@
     height: 8
   - title: BMI 30 or Greater
     name: BMI 30 or Greater
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_column
     fields: [patient.count, patient.age_tier]
@@ -465,7 +465,7 @@
     height: 3
   - title: Diabetics with Comorbidities
     name: Diabetics with Comorbidities
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_bar
     fields: [patient.count, condition__code__coding.display]
@@ -535,7 +535,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     listens_to_filters: []
     field: organization.name
@@ -545,7 +545,7 @@
     default_value: 1 years
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     listens_to_filters: []
     field: encounter.period__start_date

@@ -5,7 +5,7 @@
   elements:
   - title: 'Encounter Type #1'
     name: 'Encounter Type #1'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -94,7 +94,7 @@
     height: 2
   - title: 'Encounter Type #2'
     name: 'Encounter Type #2'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -186,7 +186,7 @@
     height: 2
   - title: 'Encounter Type #2'
     name: 'Encounter Type #2 (2)'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -278,7 +278,7 @@
     height: 2
   - title: 'Encounter Type #2'
     name: 'Encounter Type #2 (3)'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -367,7 +367,7 @@
     height: 2
   - title: 'Encounter Type #3'
     name: 'Encounter Type #3'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -456,7 +456,7 @@
     height: 2
   - title: 'Encounter Type #3'
     name: 'Encounter Type #3 (2)'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -548,7 +548,7 @@
     height: 2
   - title: 'Low Risk Counter #1'
     name: 'Low Risk Counter #1'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -635,7 +635,7 @@
     height: 2
   - title: 'Low Risk Counter #1'
     name: 'Low Risk Counter #1 (2)'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -725,7 +725,7 @@
     height: 2
   - title: 'Low Risk Counter #2'
     name: 'Low Risk Counter #2'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -812,7 +812,7 @@
     height: 2
   - title: 'Low Risk Counter #2'
     name: 'Low Risk Counter #2 (2)'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -902,7 +902,7 @@
     height: 2
   - title: 'Low Risk Counter #3'
     name: 'Low Risk Counter #3'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -989,7 +989,7 @@
     height: 2
   - title: 'Low Risk Counter #3'
     name: 'Low Risk Counter #3 (2)'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: single_value
     fields: [healthcare_predictions.avg_prob, healthcare_predictions.encounter_type_coding_display]
@@ -1095,7 +1095,7 @@
     height: 2
   - title: Encounters Over Time
     name: Encounters Over Time
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_scatter
     fields: [encounter.count, encounter.period__start_month, encounter.average_los]
@@ -1173,7 +1173,7 @@
     height: 2
   - title: Conditions by Count of Patients
     name: Conditions by Count of Patients
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_bar
     fields: [encounter.count, condition__code__coding.display]
@@ -1233,7 +1233,7 @@
     height: 6
   - title: Encounter Type By Number of Patients
     name: Encounter Type By Number of Patients
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_bar
     fields: [encounter.count, encounter__type__coding.display]
@@ -1293,7 +1293,7 @@
     height: 6
   - title: Readmission by Condition
     name: Readmission by Condition
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_grid
     fields: [healthcare_days_since_readmission.readmission_within_7, healthcare_days_since_readmission.count,
@@ -1364,7 +1364,7 @@
     height: 6
   - title: Readmission by Encounter Type
     name: Readmission by Encounter Type
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_grid
     fields: [healthcare_days_since_readmission.readmission_within_7, healthcare_days_since_readmission.count,
@@ -1436,7 +1436,7 @@
     height: 6
   - title: Overall Hospital Readmission Rate
     name: Overall Hospital Readmission Rate
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [healthcare_days_since_readmission.readmission_within_7, healthcare_days_since_readmission.count]
@@ -1499,7 +1499,7 @@
     height: 4
   - title: Readmission By Gender
     name: Readmission By Gender
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_pie
     fields: [healthcare_days_since_readmission.count, patient.gender]
@@ -1567,7 +1567,7 @@
     height: 6
   - title: Number of Readmissions Past 2 Months
     name: Number of Readmissions Past 2 Months
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.period__start_month, healthcare_days_since_readmission.count]
@@ -1635,7 +1635,7 @@
     height: 4
   - title: Hospital Encounters
     name: Hospital Encounters
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.period__start_month, encounter.count]
@@ -1691,7 +1691,7 @@
     height: 4
   - title: Readmission by Age Tier
     name: Readmission by Age Tier
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_column
     fields: [healthcare_days_since_readmission.count, patient.age_tier]
@@ -1769,7 +1769,7 @@
     height: 6
   - title: Readmission by Length of Stay
     name: Readmission by Length of Stay
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_column
     fields: [healthcare_days_since_readmission.count, encounter.length_of_stay_tier]
@@ -1876,7 +1876,7 @@
     height: 4
   - title: Number of Patients Admitted
     name: Number of Patients Admitted
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.period__start_month, patient.count]
@@ -1947,7 +1947,7 @@
     height: 4
   - title: Encounter Types
     name: Encounter Types
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_predictions
     type: looker_bar
     fields: [healthcare_predictions.encounter_type_coding_display, healthcare_predictions.count]
@@ -1997,7 +1997,7 @@
     height: 8
   - title: Most At Risk Patients
     name: Most At Risk Patients
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_grid
     fields: [patient.id, healthcare_days_since_readmission.count, healthcare_days_since_readmission.readmission_within_7,

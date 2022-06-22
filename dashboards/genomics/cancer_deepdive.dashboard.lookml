@@ -5,7 +5,7 @@
   elements:
   - title: Population Count
     name: Population Count
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: single_value
     fields: [genomics_mapping.count_population]
@@ -67,7 +67,7 @@
     height: 5
   - title: Age Breakdown
     name: Age Breakdown
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_bar
     fields: [genomics_mapping.age_tier, genomics_mapping.count_population]
@@ -122,7 +122,7 @@
     height: 5
   - title: Population by Gene & Classification
     name: Population by Gene & Classification
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_column
     fields: [genomics_mapping.count_population, genomics_mapping.classification, genomics_mapping.gene]
@@ -169,7 +169,7 @@
     height: 8
   - title: Gene Breakdown
     name: Gene Breakdown
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_grid
     fields: [genomics_mapping.count_population, genomics_mapping.gene, genomics_mapping.distinct_variants]
@@ -245,7 +245,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.sex
@@ -258,7 +258,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.age_tier
@@ -271,7 +271,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.ethnicity
@@ -284,7 +284,7 @@
     ui_config:
       type: advanced
       display: popover
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.diagnosis

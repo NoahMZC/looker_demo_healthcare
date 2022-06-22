@@ -4,7 +4,7 @@
   elements:
   - title: Observation Count
     name: Observation Count
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [observation_vitals.issued_year, observation_vitals.count]
@@ -38,7 +38,7 @@
     height: 4
   - title: "% Anomalies by Vital Type"
     name: "% Anomalies by Vital Type"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_area
     fields: [observation_vitals.type, observation_vitals.issued_week, observation_vitals.count_anomalies]
@@ -99,7 +99,7 @@
     height: 8
   - title: "% Anomalies"
     name: "% Anomalies"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [observation_vitals.issued_year, observation_vitals.percent_anomalies]
@@ -133,7 +133,7 @@
     height: 4
   - title: Overall Stats by Vital Type
     name: Overall Stats by Vital Type
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [observation_vitals.type, observation_vitals.count_anomalies, observation_vitals.count,
@@ -236,7 +236,7 @@
     height: 4
   - title: 15 Most Concerning Hospitals
     name: 15 Most Concerning Hospitals
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [observation_vitals.count_anomalies, observation_vitals.count, observation_vitals.percent_anomalies,
@@ -335,7 +335,7 @@
     height: 8
   - title: Distribution of Values by Vital
     name: Distribution of Values by Vital
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_area
     fields: [observation_vitals.type, observation_count_by_vital.percent_of_total_by_vital_type,
@@ -402,7 +402,7 @@
     height: 8
   - title: "# Patients"
     name: "# Patients"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: realtime_observations
     type: single_value
     fields: [realtime_observations.count]
@@ -432,7 +432,7 @@
     default_value: '4'
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     listens_to_filters: []
     field: observation_vitals.anomaly
@@ -442,7 +442,7 @@
     default_value: 1 years ago for 1 years
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     listens_to_filters: []
     field: observation_vitals.issued_year

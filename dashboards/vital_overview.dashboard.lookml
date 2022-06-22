@@ -4,7 +4,7 @@
   elements:
   - title: Hospital Breakdown
     name: Hospital Breakdown
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [observation_vitals.count_anomalies, observation_vitals.count, observation_vitals.percent_anomalies,
@@ -104,7 +104,7 @@
     height: 8
   - title: Manufacturer
     name: Manufacturer
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [observation_vitals.count_anomalies, observation_vitals.count, observation_vitals.percent_anomalies,
@@ -205,7 +205,7 @@
     height: 4
   - title: Anomalies Over Time
     name: Anomalies Over Time
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [observation_vitals.percent_anomalies, observation_vitals.issued_day_of_week,
@@ -317,7 +317,7 @@
     height: 8
   - title: "# Patients"
     name: "# Patients"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [observation_vitals.issued_year, patient.count]
@@ -352,7 +352,7 @@
     height: 4
   - title: "# Observations"
     name: "# Observations"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [observation_vitals.issued_year, observation_vitals.count]
@@ -387,7 +387,7 @@
     height: 4
   - title: "% Anomalies"
     name: "% Anomalies"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [observation_vitals.issued_year, observation_vitals.percent_anomalies]
@@ -427,7 +427,7 @@
     default_value: Body Weight
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     listens_to_filters: []
     field: observation_vitals.type

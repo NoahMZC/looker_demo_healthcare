@@ -5,7 +5,7 @@
   elements:
   - title: New Tile
     name: New Tile
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_new_patients
     type: single_value
     fields: [healthcare_bqml_new_patients.patient_id, healthcare_bqml_new_patients.patient_name]
@@ -38,7 +38,7 @@
     height: 6
   - title: New Encounter Records
     name: New Encounter Records
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_new_patients
     type: looker_grid
     fields: [healthcare_bqml_new_patients.patient_name, healthcare_bqml_new_patients.patient_us_core_race,
@@ -101,7 +101,7 @@
     height: 6
   - title: Number of Rows
     name: Number of Rows
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_new_patients
     type: single_value
     fields: [healthcare_bqml_new_patients.count]
@@ -124,7 +124,7 @@
     height: 3
   - title: Table Name
     name: Table Name
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: new_patient_info_schema
     type: single_value
     fields: [new_patient_info_schema.table_name]
@@ -151,7 +151,7 @@
     height: 3
   - title: BQ Project
     name: BQ Project
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: new_patient_info_schema
     type: single_value
     fields: [new_patient_info_schema.table_catalog]
@@ -188,7 +188,7 @@
     height: 3
   - title: Dataset
     name: Dataset
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: new_patient_info_schema
     type: single_value
     fields: [new_patient_info_schema.table_schema]
@@ -240,7 +240,7 @@
     height: 3
   - title: BQML Input Type
     name: BQML Input Type
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: new_patient_info_schema
     type: looker_grid
     fields: [new_patient_info_schema.column_name, new_patient_info_schema.data_type]
@@ -298,7 +298,7 @@
     height: 4
   - title: Table Type
     name: Table Type
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: new_patient_predictions_info_schema
     type: single_value
     fields: [new_patient_predictions_info_schema.table_type]
@@ -323,7 +323,7 @@
     height: 2
   - title: Is Insertable Into
     name: Is Insertable Into
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: new_patient_predictions_info_schema
     type: single_value
     fields: [new_patient_predictions_info_schema.is_insertable_into]
@@ -348,7 +348,7 @@
     height: 2
   - title: Table Creation Date
     name: Table Creation Date
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: new_patient_predictions_info_schema
     type: single_value
     fields: [new_patient_predictions_info_schema.creation_time_time]
@@ -429,7 +429,7 @@
     height: 4
   - title: New Survey
     name: New Survey
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_survey
     type: single_value
     fields: [patient_survey.ease_of_scheduling_appointment]
@@ -484,7 +484,7 @@
     height: 6
   - title: New Survey Records
     name: New Survey Records
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_survey
     type: looker_grid
     fields: [patient_survey.ease_of_scheduling_appointment, patient_survey.likelihood_of_recommendation,

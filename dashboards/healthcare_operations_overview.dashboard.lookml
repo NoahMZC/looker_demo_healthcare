@@ -4,7 +4,7 @@
   elements:
   - title: ED Wait Time
     name: ED Wait Time
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.average_los]
@@ -40,7 +40,7 @@
     height: 4
   - title: Number of Patients
     name: Number of Patients
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [patient.count]
@@ -67,7 +67,7 @@
     height: 4
   - title: Number of Encounters
     name: Number of Encounters
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.count, encounter.period__start_month]
@@ -110,7 +110,7 @@
     height: 3
   - title: Visits by Type Over Time
     name: Visits by Type Over Time
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_line
     fields: [encounter.period__start_month_name, encounter.count, encounter.code_name]
@@ -183,7 +183,7 @@
     height: 3
   - title: Encounters by Age
     name: Encounters by Age
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_donut_multiples
     fields: [encounter.count, encounter.code_name, patient.age_tier]
@@ -248,7 +248,7 @@
     height: 7
   - title: LOS by Encounter Type
     name: LOS by Encounter Type
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_scatter
     fields: [encounter__type__coding.display, encounter.count, encounter.average_los,
@@ -297,7 +297,7 @@
     height: 7
   - title: LOS (Hours) Stats
     name: LOS (Hours) Stats
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_column
     fields: [encounter.25_los, encounter.med_los, encounter.75_los]
@@ -354,7 +354,7 @@
     height: 8
   - title: Encounters by Top Condition
     name: Encounters by Top Condition
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_grid
     fields: [condition__code__coding.code, condition__code__coding.display, encounter.count,
@@ -409,7 +409,7 @@
     height: 11
   - title: Patients by Age & Gender
     name: Patients by Age & Gender
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_column
     fields: [patient.age_tier, patient.gender, encounter.count_patients]
@@ -466,7 +466,7 @@
     height: 7
   - title: Number of OP Visits
     name: Number of OP Visits
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.count, encounter.period__start_month]
@@ -498,7 +498,7 @@
     height: 4
   - title: Avg ED Wait Time
     name: Avg ED Wait Time
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.average_los, encounter.period__start_year]
@@ -534,7 +534,7 @@
     height: 4
   - title: 30-Day Readmission Rate
     name: 30-Day Readmission Rate
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: readmission
     type: single_value
     fields: [readmission.perc_30_day_readmission]
@@ -565,7 +565,7 @@
     height: 4
   - title: Readmission Causes
     name: Readmission Causes
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: readmission
     type: sankey
     fields: [prior_condition__code__coding.display, condition__code__coding.display,
@@ -610,7 +610,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_extended
     listens_to_filters: []
     field: organization.id

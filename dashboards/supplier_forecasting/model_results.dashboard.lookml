@@ -12,7 +12,7 @@
     height: 2
   - title: Training Detail
     name: Training Detail
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: machine_learning_raw
     type: looker_grid
     fields: [machine_learning_raw.iteration, machine_learning_raw.learning_rate, machine_learning_raw.loss]
@@ -68,7 +68,7 @@
     height: 6
   - title: Training Loss over Time
     name: Training Loss over Time
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: machine_learning_raw
     type: looker_area
     fields: [machine_learning_raw.iteration, machine_learning_raw.total_loss]
@@ -132,7 +132,7 @@
     height: 6
   - title: Model Details
     name: Model Details
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: predictive_power_raw
     type: looker_single_record
     fields: [predictive_power_raw.mean_absolute_error, predictive_power_raw.mean_squared_error,
@@ -167,7 +167,7 @@
     height: 2
   - title: Predictions over Time
     name: Predictions over Time
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_line
     fields: [supply_forecasting_raw.week_start_week, applied_model_results.average_actual,
@@ -217,7 +217,7 @@
     height: 11
   - title: Residuals
     name: Residuals
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_line
     fields: [supply_forecasting_raw.week_start_week, applied_model_results.average_actual,
@@ -284,7 +284,7 @@
     height: 11
   - title: Predictions by SKU
     name: Predictions by SKU
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_grid
     fields: [applied_model_results.average_actual, applied_model_results.average_predicted,

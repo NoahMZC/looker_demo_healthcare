@@ -5,7 +5,7 @@
   elements:
   - title: Count by Gender
     name: Count by Gender
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_donut_multiples
     fields: [genomics_mapping.sex, genomics_mapping.count_population]
@@ -58,7 +58,7 @@
     height: 5
   - title: Count by Ethnicity
     name: Count by Ethnicity
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_bar
     fields: [genomics_mapping.ethnicity, genomics_mapping.count_population]
@@ -111,7 +111,7 @@
     height: 6
   - title: Count by Age
     name: Count by Age
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_bar
     fields: [genomics_mapping.age_tier, genomics_mapping.count_population]
@@ -166,7 +166,7 @@
     height: 5
   - title: Population
     name: Population
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: single_value
     fields: [genomics_mapping.count_population]
@@ -228,7 +228,7 @@
     height: 5
   - title: Average Age
     name: Average Age
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: single_value
     fields: [genomics_mapping.average_age]
@@ -290,7 +290,7 @@
     height: 5
   - title: Diagnosis Details
     name: Diagnosis Details
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_grid
     fields: [genomics_mapping.diagnosis, genomics_mapping.count_population, genomics_mapping.average_stddev_age]
@@ -373,7 +373,7 @@
     height: 8
   - title: Diagnosis / Age Breakdown
     name: Diagnosis / Age Breakdown
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_column
     fields: [genomics_mapping.diagnosis, genomics_mapping.count_population, genomics_mapping.age_tier]
@@ -470,7 +470,7 @@
     ui_config:
       type: button_group
       display: popover
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.sex
@@ -483,7 +483,7 @@
     ui_config:
       type: checkboxes
       display: popover
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.age_tier
@@ -496,7 +496,7 @@
     ui_config:
       type: checkboxes
       display: popover
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.ethnicity
@@ -509,7 +509,7 @@
     ui_config:
       type: checkboxes
       display: popover
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.diagnosis

@@ -5,7 +5,7 @@
   elements:
   - title: ROC Curve
     name: ROC Curve
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_roc
     type: looker_line
     fields: [healthcare_bqml_roc.false_positives, healthcare_bqml_roc.false_negatives,
@@ -65,7 +65,7 @@
     height: 10
   - title: False Negative
     name: False Negative
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_matrix_unseen
     type: single_value
     fields: [healthcare_bqml_matrix_unseen.expected_label, healthcare_bqml_matrix_unseen.false,
@@ -127,7 +127,7 @@
     height: 5
   - title: False Positive
     name: False Positive
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_matrix_unseen
     type: single_value
     fields: [healthcare_bqml_matrix_unseen.expected_label, healthcare_bqml_matrix_unseen.true,
@@ -192,7 +192,7 @@
     height: 5
   - title: True Negative
     name: True Negative
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_matrix_unseen
     type: single_value
     fields: [healthcare_bqml_matrix_unseen.expected_label, healthcare_bqml_matrix_unseen.true,
@@ -257,7 +257,7 @@
     height: 5
   - title: True Positive
     name: True Positive
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_matrix_unseen
     type: single_value
     fields: [healthcare_bqml_matrix_unseen.expected_label, healthcare_bqml_matrix_unseen.true,
@@ -356,7 +356,7 @@
     height: 4
   - title: Accuracy
     name: Accuracy
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_eval1
     type: single_value
     fields: [healthcare_bqml_eval1.accuracy]
@@ -380,7 +380,7 @@
     height: 2
   - title: Log Loss
     name: Log Loss
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_eval1
     type: single_value
     fields: [healthcare_bqml_eval1.log_loss]
@@ -404,7 +404,7 @@
     height: 2
   - title: Precision
     name: Precision
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_eval1
     type: single_value
     fields: [healthcare_bqml_eval1.precision]
@@ -428,7 +428,7 @@
     height: 2
   - title: Recall
     name: Recall
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_eval1
     type: single_value
     fields: [healthcare_bqml_eval1.recall]
@@ -494,7 +494,7 @@
     height: 2
   - title: F1 Score
     name: F1 Score
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_bqml_eval1
     type: single_value
     fields: [healthcare_bqml_eval1.f1_score]
@@ -519,7 +519,7 @@
     height: 2
   - title: Training Duration
     name: Training Duration
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: healthcare_training_info1
     type: single_value
     fields: [healthcare_training_info1.duration_minutes]

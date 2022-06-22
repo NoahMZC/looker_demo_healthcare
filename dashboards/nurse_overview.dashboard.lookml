@@ -4,7 +4,7 @@
   elements:
   - title: Nurse
     name: Nurse
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [practitioner.name]
@@ -18,7 +18,7 @@
     height: 3
   - title: Nurse Details
     name: Nurse Details
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_single_record
     fields: [practitioner.name, practitioner.id, practitioner.gender, practitioner.active,
@@ -34,7 +34,7 @@
     height: 5
   - title: Largest Anomalies
     name: Largest Anomalies
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [patient.ssn_hashed, observation_vitals.issued_date, observation_vitals.type,
@@ -83,7 +83,7 @@
     height: 8
   - title: Vital Distribution
     name: Vital Distribution
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_area
     fields: [observation_vitals.type, observation_count_by_vital.percent_of_total_by_vital_type,
@@ -157,7 +157,7 @@
     default_value: Maryjo Osinski
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     listens_to_filters: []
     field: practitioner.name

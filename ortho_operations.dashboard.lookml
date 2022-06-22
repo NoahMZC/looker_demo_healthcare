@@ -16,7 +16,7 @@
     height: 2
   - title: Reasons for Late Start
     name: Reasons for Late Start
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_area
     fields: [ortho_reasons_wait_time.reason_wait_time_description, ortho_procedures.actual_start_month,
@@ -91,7 +91,7 @@
     height: 10
   - title: Upcoming Appointments
     name: Upcoming Appointments
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.count_cases]
@@ -122,7 +122,7 @@
     height: 4
   - title: Pending Informed Consents
     name: Pending Informed Consents
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.count_of_incomplete_paperwork]
@@ -154,7 +154,7 @@
     height: 4
   - title: Payer Mix Trends
     name: Payer Mix Trends
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_column
     fields: [ortho_payer.payer, ortho_procedures.total_procedural_charges, ortho_procedures.actual_start_month]
@@ -226,7 +226,7 @@
     height: 7
   - title: Payer Mix
     name: Payer Mix
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_pie
     fields: [ortho_procedures.total_procedural_charges, ortho_payer.payer_type]
@@ -302,7 +302,7 @@
     height: 2
   - title: No Show Rate
     name: No Show Rate
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.no_show_rate]
@@ -342,7 +342,7 @@
     height: 2
   - title: Number of Cases
     name: Number of Cases
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.count_cases]
@@ -384,7 +384,7 @@
     height: 2
   - title: Total Charges
     name: Total Charges
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.total_procedural_charges]
@@ -414,7 +414,7 @@
     height: 2
   - title: Count of No Shows
     name: Count of No Shows
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.count_of_no_shows]
@@ -445,7 +445,7 @@
     height: 4
   - title: Facility Late Start Comparisons
     name: Facility Late Start Comparisons
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_column
     fields: [ortho_reasons_wait_time.reason_wait_time_description, ortho_facilities.facility,
@@ -513,7 +513,7 @@
     height: 10
   - title: Facilities by Total Charges
     name: Facilities by Total Charges
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_map
     fields: [ortho_npi_facts.facility_name, ortho_facilities.facility_location, ortho_procedures.total_procedural_charges]
@@ -559,7 +559,7 @@
     height: 9
   - title: Facility Mapping
     name: Facility Mapping
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_map
     fields: [ortho_npi_facts.facility_name, ortho_facilities.facility_location, ortho_procedures.count_cases]
@@ -600,7 +600,7 @@
     height: 9
   - title: Top 10 Facility Volume and Charges
     name: Top 10 Facility Volume and Charges
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_bar
     fields: [ortho_npi_facts.facility_name, ortho_procedures.total_procedural_charges,
@@ -668,7 +668,7 @@
     height: 9
   - title: Payer Coverage Comparison by Top 10 Procedures
     name: Payer Coverage Comparison by Top 10 Procedures
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_bar
     fields: [ortho_cpt_codes.cpt_code, ortho_cpt_codes.cpt_description, ortho_procedures.average_procedural_charges,
@@ -771,7 +771,7 @@
     height: 8
   - title: Orthopedic Medical Suppliers
     name: Orthopedic Medical Suppliers
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_pie
     fields: [ortho_supplier_preferences.supplier_name, ortho_procedures.total_supply_costs]
@@ -833,7 +833,7 @@
     height: 2
   - title: Implant Type by Medical Supplier
     name: Implant Type by Medical Supplier
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_bar
     fields: [ortho_supplier_preferences.supplier_name, ortho_procedures.total_supply_costs,
@@ -892,7 +892,7 @@
     height: 9
   - title: Providers by Preferred Supplier
     name: Providers by Preferred Supplier
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_grid
     fields: [ortho_npi_facts.npi, ortho_supplier_preferences.supplier_name, ortho_npi_facts.facility_name,
@@ -994,7 +994,7 @@
     height: 9
   - title: New Tile
     name: New Tile
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.total_supply_costs]
@@ -1025,7 +1025,7 @@
     height: 2
   - title: Total No Shows
     name: Total No Shows
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.count_of_no_shows]
@@ -1056,7 +1056,7 @@
     height: 2
   - title: Avg Cost per Case
     name: Avg Cost per Case
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.average_cost_per_case]
@@ -1089,7 +1089,7 @@
     height: 2
   - title: No Show Rate Monthly Trend by Facility
     name: No Show Rate Monthly Trend by Facility
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_line
     fields: [ortho_procedures.no_show_rate, ortho_npi_facts.facility_name, ortho_procedures.actual_start_month]
@@ -1151,7 +1151,7 @@
     ui_config:
       type: dropdown_menu
       display: popover
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     listens_to_filters: []
     field: ortho_npi_facts.facility_name
@@ -1164,7 +1164,7 @@
     ui_config:
       type: button_group
       display: popover
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     listens_to_filters: []
     field: ortho_payer.payer_type
@@ -1174,7 +1174,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     listens_to_filters: []
     field: ortho_supplier_preferences.supplier_name

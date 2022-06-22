@@ -5,7 +5,7 @@
   elements:
   - title: Count Population
     name: Count Population
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: single_value
     fields: [genomics_mapping.count_population]
@@ -71,7 +71,7 @@
     height: 4
   - title: Population by Ethnicity
     name: Population by Ethnicity
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_bar
     fields: [genomics_mapping.ethnicity, genomics_mapping.count_population]
@@ -128,7 +128,7 @@
     height: 8
   - title: Count by Age by Diagnosis
     name: Count by Age by Diagnosis
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_column
     fields: [genomics_mapping.diagnosis, genomics_mapping.count_population, genomics_mapping.age_tier]
@@ -206,7 +206,7 @@
     height: 8
   - title: Variant Count by Classification by Zygosity
     name: Variant Count by Classification by Zygosity
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_column
     fields: [genomics_mapping.classification, genomics_mapping.zygosity, genomics_mapping.distinct_variants]
@@ -257,7 +257,7 @@
     height: 7
   - title: Average Age
     name: Average Age
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: single_value
     fields: [genomics_mapping.average_age]
@@ -322,7 +322,7 @@
     height: 4
   - title: Population Count by Classification by Zygosity
     name: Population Count by Classification by Zygosity
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_column
     fields: [genomics_mapping.classification, genomics_mapping.count_population, genomics_mapping.zygosity]
@@ -373,7 +373,7 @@
     height: 7
   - title: Variant Summary
     name: Variant Summary
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     type: looker_grid
     fields: [genomics_mapping.variant, genomics_mapping.classification, genomics_mapping.zygosity,
@@ -424,7 +424,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.sex
@@ -434,7 +434,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.age_tier
@@ -444,7 +444,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.ethnicity
@@ -454,7 +454,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.diagnosis
@@ -464,7 +464,7 @@
     default_value: BRCA2
     allow_multiple_values: true
     required: false
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.gene
@@ -474,7 +474,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.variant
@@ -484,7 +484,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.classification
@@ -494,7 +494,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: genomics_mapping
+    model: Looker_Demo_genomics_mapping
     explore: genomics_mapping
     listens_to_filters: []
     field: genomics_mapping.zygosity

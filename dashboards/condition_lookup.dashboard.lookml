@@ -4,7 +4,7 @@
   elements:
   - title: Condition Name
     name: Condition Name
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: single_value
     fields: [condition__code__coding.display]
@@ -62,7 +62,7 @@
     height: 4
   - title: Number of Cases Over Time
     name: Number of Cases Over Time
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_line
     fields: [condition.onset_date, encounter.count]
@@ -119,7 +119,7 @@
     height: 6
   - title: Avg LOS Over Time
     name: Avg LOS Over Time
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_line
     fields: [condition.onset_date, encounter.average_los]
@@ -176,7 +176,7 @@
     height: 5
   - title: Commonly Prescribed Medications
     name: Commonly Prescribed Medications
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_column
     fields: [medication_request__medication__codeable_concept__coding.display, medication_request.count]
@@ -272,7 +272,7 @@
     height: 5
   - title: Patient Demographics
     name: Patient Demographics
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_donut_multiples
     fields: [patient.age_tier, patient.count, patient.gender]
@@ -331,7 +331,7 @@
     height: 6
   - title: Top Physicians
     name: Top Physicians
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: looker_grid
     fields: [practitioner.id, encounter.count, encounter.min_los, encounter.med_los,
@@ -387,7 +387,7 @@
     height: 3
   - title: 30 Day Readmission Rate
     name: 30 Day Readmission Rate
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: readmission
     type: single_value
     fields: [readmission.perc_30_day_readmission]
@@ -427,7 +427,7 @@
     height: 2
   - title: Total Patients Treated - Past Complete Year
     name: Total Patients Treated - Past Complete Year
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: single_value
     fields: [encounter.count_patients]
@@ -453,7 +453,7 @@
     height: 4
   - title: Average LOS (min)
     name: Average LOS (min)
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     type: single_value
     fields: [encounter.period__start_year, encounter.average_los]
@@ -490,7 +490,7 @@
     default_value: '72892002'
     allow_multiple_values: false
     required: true
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: condition_extended
     listens_to_filters: []
     field: condition__code__coding.code

@@ -21,7 +21,7 @@
     height: 3
   - title: Provider MGMA Ranking Distribution
     name: Provider MGMA Ranking Distribution
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_column
     fields: [ortho_npi_facts.count, ortho_npi_facts.npi_rank_tier]
@@ -83,7 +83,7 @@
     height: 8
   - title: Facility Name
     name: Facility Name
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_npi_facts.facility_name]
@@ -141,7 +141,7 @@
     height: 2
   - title: Provider Count
     name: Provider Count
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_npi_facts.count]
@@ -175,7 +175,7 @@
     height: 2
   - title: Case Count
     name: Case Count
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.count_cases]
@@ -209,7 +209,7 @@
     height: 2
   - title: Provider MGMA Ranking Detail
     name: Provider MGMA Ranking Detail
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_scatter
     fields: [ortho_npi_facts.npi, ortho_npi_facts.npi_rank, ortho_procedures.total_procedural_charges]
@@ -279,7 +279,7 @@
     height: 8
   - title: Provider Ranking Metrics (MGMA)
     name: Provider Ranking Metrics (MGMA)
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_grid
     fields: [ortho_npi_facts.npi, ortho_npi_facts.npi_rank, average_of_average_of_w_rvu,
@@ -341,7 +341,7 @@
     height: 8
   - title: Total Charges
     name: Total Charges
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.total_procedural_charges]
@@ -376,7 +376,7 @@
     height: 2
   - title: Wait Reasons Monthly Trend
     name: Wait Reasons Monthly Trend
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: looker_column
     fields: [ortho_reasons_wait_time.reason_wait_time_description, ortho_procedures.count_cases,
@@ -449,7 +449,7 @@
     height: 8
   - title: New Tile
     name: New Tile
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.count_of_incomplete_paperwork]
@@ -483,7 +483,7 @@
     height: 2
   - title: Upcoming Appointments
     name: Upcoming Appointments
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     type: single_value
     fields: [ortho_procedures.count_cases]
@@ -533,7 +533,7 @@
     default_value: Chattanooga Facility
     allow_multiple_values: true
     required: false
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     listens_to_filters: []
     field: ortho_npi_facts.facility_name
@@ -543,7 +543,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: healthcare_operations
+    model: Looker_Demo_healthcare_operations
     explore: ortho_procedures
     listens_to_filters: []
     field: ortho_npi_facts.provider_rank_status

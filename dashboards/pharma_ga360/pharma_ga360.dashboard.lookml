@@ -5,7 +5,7 @@
   elements:
   - title: Sessions
     name: Sessions
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: single_value
     fields: [ga_sessions.session_count, ga_sessions.partition_date]
@@ -66,7 +66,7 @@
     height: 3
   - title: Avg Duration
     name: Avg Duration
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: single_value
     fields: [ga_sessions.partition_date, totals.timeonsite_average_per_session]
@@ -127,7 +127,7 @@
     height: 3
   - title: Users
     name: Users
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: single_value
     fields: [ga_sessions.partition_date, ga_sessions.unique_visitors]
@@ -188,7 +188,7 @@
     height: 3
   - title: Returning Users
     name: Returning Users
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: single_value
     fields: [ga_sessions.partition_date, ga_sessions.returning_visitors]
@@ -249,7 +249,7 @@
     height: 3
   - title: Bounce Rate
     name: Bounce Rate
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: single_value
     fields: [ga_sessions.partition_date, totals.bounce_rate]
@@ -310,7 +310,7 @@
     height: 3
   - title: Page Views
     name: Page Views
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: single_value
     fields: [ga_sessions.partition_date, totals.page_views_session]
@@ -371,7 +371,7 @@
     height: 3
   - title: Time Series
     name: Time Series
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: looker_line
     fields: [ga_sessions.session_count, ga_sessions.partition_date, totals.page_views_session,
@@ -450,7 +450,7 @@
     height: 10
   - title: How Often are Users Returning?
     name: How Often are Users Returning?
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: looker_column
     fields: [ga_sessions.session_count, ga_sessions.visitnumber]
@@ -527,7 +527,7 @@
     height: 10
   - title: When are users engaging?
     name: When are users engaging?
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: looker_grid
     fields: [ga_sessions.session_count, ga_sessions.partition_day_of_week, ga_sessions.hour_of_day]
@@ -629,7 +629,7 @@
     height: 10
   - title: Engagement by Property
     name: Engagement by Property
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: looker_column
     fields: [ga_sessions.session_count, ga_sessions.property, totals.timeonsite_average_per_session]
@@ -730,7 +730,7 @@
     height: 9
   - title: Engagement by Medium
     name: Engagement by Medium
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: looker_column
     fields: [ga_sessions.session_count, totals.timeonsite_average_per_session, trafficSource.medium]
@@ -831,7 +831,7 @@
     height: 9
   - title: Engagement by Location
     name: Engagement by Location
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: looker_map
     fields: [ga_sessions.session_count, totals.timeonsite_average_per_session, geoNetwork.region]
@@ -952,7 +952,7 @@
     height: 9
   - title: Top Pages
     name: Top Pages
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     type: looker_grid
     fields: [ga_sessions.session_count, hits_page.pageTitle, totals.page_views_session,
@@ -1074,7 +1074,7 @@
     default_value: 7 days
     allow_multiple_values: true
     required: false
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     listens_to_filters: []
     field: ga_sessions.partition_date
@@ -1084,7 +1084,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     listens_to_filters: []
     field: ga_sessions.property
@@ -1094,7 +1094,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     listens_to_filters: []
     field: ga_sessions.first_time_visitor
@@ -1104,7 +1104,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     listens_to_filters: []
     field: geoNetwork.region
@@ -1114,7 +1114,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: ga360
+    model: Looker_Demo_ga360
     explore: ga_sessions
     listens_to_filters: []
     field: trafficSource.medium

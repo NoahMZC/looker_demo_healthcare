@@ -4,7 +4,7 @@
   elements:
   - title: "# Observations"
     name: "# Observations"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [observation_vitals.issued_year, observation_vitals.count]
@@ -39,7 +39,7 @@
     height: 4
   - title: "% Anomalies"
     name: "% Anomalies"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [observation_vitals.issued_year, observation_vitals.percent_anomalies]
@@ -74,7 +74,7 @@
     height: 4
   - title: 15 Nurses to Focus On
     name: 15 Nurses to Focus On
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [observation_vitals.count_anomalies, observation_vitals.count, observation_vitals.percent_anomalies,
@@ -173,7 +173,7 @@
     height: 7
   - title: Stats by Vitals
     name: Stats by Vitals
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [observation_vitals.type, observation_vitals.count_anomalies, observation_vitals.count,
@@ -277,7 +277,7 @@
     height: 4
   - title: Distribution of Vitals
     name: Distribution of Vitals
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_area
     fields: [observation_vitals.type, observation_count_by_vital.percent_of_total_by_vital_type,
@@ -353,7 +353,7 @@
     height: 2
   - title: Anomalies In Past Day
     name: Anomalies In Past Day
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: single_value
     fields: [observation_vitals.count_anomalies]
@@ -392,7 +392,7 @@
     height: 2
   - title: 'Error Type 1: Unit Error'
     name: 'Error Type 1: Unit Error'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_grid
     fields: [observation_vitals.issued_time_of_day, observation_vitals.device_manufacturer,
@@ -443,7 +443,7 @@
     height: 5
   - title: 'Error Type 2: Data Entry Error'
     name: 'Error Type 2: Data Entry Error'
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_bar
     fields: [observation_vitals.type, observation_vitals.count_anomalies]
@@ -517,7 +517,7 @@
     height: 5
   - title: "# Patients"
     name: "# Patients"
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: realtime_observations
     type: single_value
     fields: [realtime_observations.count]
@@ -539,7 +539,7 @@
     default_value: NORWOOD HOSPITAL
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     listens_to_filters: []
     field: organization.name
@@ -549,7 +549,7 @@
     default_value: '4'
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     listens_to_filters: []
     field: observation_vitals.anomaly
@@ -559,7 +559,7 @@
     default_value: 1 years ago for 1 years
     allow_multiple_values: true
     required: false
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     listens_to_filters: []
     field: observation_vitals.issued_year

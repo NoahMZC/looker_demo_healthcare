@@ -4,7 +4,7 @@
   elements:
   - title: Impressions
     name: Impressions
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_impressions, performance_temp.ctr]
@@ -56,7 +56,7 @@
     height: 5
   - title: Media Spend
     name: Media Spend
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_media_cost, performance_temp.cpm]
@@ -108,7 +108,7 @@
     height: 5
   - title: Total Clicks
     name: Total Clicks
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_clicks, performance_temp.cpc]
@@ -160,7 +160,7 @@
     height: 5
   - title: Volume over Time
     name: Volume over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_column
     fields: [blended_results.audience_list_type, performance_temp.date_month, performance_temp.total_impressions]
@@ -210,7 +210,7 @@
     height: 12
   - title: Advertiser Deep Dive
     name: Advertiser Deep Dive
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_grid
     fields: [performance_temp.total_media_cost, performance_temp.total_impressions,
@@ -267,7 +267,7 @@
     height: 10
   - title: Media Spend by Audience Type by List Category
     name: Media Spend by Audience Type by List Category
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_donut_multiples
     fields: [performance_temp.audience_list_category, performance_temp.total_media_cost,
@@ -317,7 +317,7 @@
     height: 10
   - title: Trend over Time
     name: Trend over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_line
     fields: [performance_temp.ctr, performance_temp.cpm, performance_temp.cpc, performance_temp.date_month]
@@ -382,7 +382,7 @@
     default_value: 365 days
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.date_date
@@ -395,7 +395,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.audience_list_category
@@ -408,7 +408,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: blended_results.audience_list_type
@@ -419,7 +419,7 @@
   elements:
   - title: CPC over Time
     name: CPC over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_line
     fields: [performance_temp.cpc, blended_results.audience_list_type, performance_temp.date_month]
@@ -464,7 +464,7 @@
     height: 6
   - title: CPM over Time
     name: CPM over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_line
     fields: [blended_results.audience_list_type, performance_temp.date_month, performance_temp.cpm]
@@ -509,7 +509,7 @@
     height: 6
   - title: CTR over Time
     name: CTR over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_line
     fields: [blended_results.audience_list_type, performance_temp.date_month, performance_temp.ctr]
@@ -554,7 +554,7 @@
     height: 6
   - title: Impressions over Time
     name: Impressions over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_column
     fields: [blended_results.audience_list_type, performance_temp.date_month, performance_temp.total_impressions]
@@ -605,7 +605,7 @@
     height: 13
   - title: Impressions
     name: Impressions
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_impressions, performance_temp.ctr]
@@ -658,7 +658,7 @@
     height: 5
   - title: Media Spend
     name: Media Spend
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_media_cost, performance_temp.cpm]
@@ -711,7 +711,7 @@
     height: 5
   - title: Clicks
     name: Clicks
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_clicks, performance_temp.cpc]
@@ -764,7 +764,7 @@
     height: 5
   - title: Audience List Detail
     name: Audience List Detail
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_grid
     fields: [performance_temp.audience_list, performance_temp.total_media_cost, performance_temp.total_impressions,
@@ -827,7 +827,7 @@
     default_value: 365 days
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.date_date
@@ -837,7 +837,7 @@
     default_value: Aveeno - [Hybrid]
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.advertiser
@@ -850,7 +850,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.audience_list_category
@@ -863,7 +863,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: blended_results.audience_list_type
@@ -874,7 +874,7 @@
   elements:
   - title: Impressions
     name: Impressions
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_impressions, performance_temp.ctr]
@@ -927,7 +927,7 @@
     height: 5
   - title: Media Cost
     name: Media Cost
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_media_cost, performance_temp.cpm]
@@ -980,7 +980,7 @@
     height: 5
   - title: Clicks
     name: Clicks
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: single_value
     fields: [performance_temp.total_clicks, performance_temp.cpc]
@@ -1033,7 +1033,7 @@
     height: 5
   - title: Impressions over Time
     name: Impressions over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_column
     fields: [blended_results.audience_list_type, performance_temp.date_month, performance_temp.total_impressions]
@@ -1084,7 +1084,7 @@
     height: 13
   - title: CPC over Time
     name: CPC over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_line
     fields: [performance_temp.cpc, blended_results.audience_list_type, performance_temp.date_month]
@@ -1129,7 +1129,7 @@
     height: 6
   - title: CTR over Time
     name: CTR over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_line
     fields: [blended_results.audience_list_type, performance_temp.date_month, performance_temp.ctr]
@@ -1174,7 +1174,7 @@
     height: 6
   - title: CPM over Time
     name: CPM over Time
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_line
     fields: [blended_results.audience_list_type, performance_temp.date_month, performance_temp.cpm]
@@ -1224,7 +1224,7 @@
     default_value: 365 days
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.date_date
@@ -1235,7 +1235,7 @@
       and Lapsed_555535_CP_RET_GM_BE-AB_CE-N/A_T-R104W"'
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.audience_list
@@ -1248,7 +1248,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.audience_list_category
@@ -1261,7 +1261,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: blended_results.audience_list_type
@@ -1272,7 +1272,7 @@
   elements:
   - title: Media Spend by Audience Type
     name: Media Spend by Audience Type
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_donut_multiples
     fields: [blended_results.audience_list_type, performance_temp.total_media_cost]
@@ -1324,7 +1324,7 @@
     height: 10
   - title: Performance by Type
     name: Performance by Type
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_grid
     fields: [blended_results.audience_list_type, performance_temp.total_impressions,
@@ -1406,7 +1406,7 @@
     height: 4
   - title: CPM by Audience Type
     name: CPM by Audience Type
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_column
     fields: [blended_results.audience_list_type, performance_temp.cpm]
@@ -1503,7 +1503,7 @@
     height: 6
   - title: CPC by Audience Type
     name: CPC by Audience Type
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_column
     fields: [blended_results.audience_list_type, performance_temp.cpc]
@@ -1595,7 +1595,7 @@
     height: 6
   - title: CTR by Audience Type
     name: CTR by Audience Type
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_column
     fields: [blended_results.audience_list_type, performance_temp.ctr]
@@ -1688,7 +1688,7 @@
     height: 6
   - title: Performance by Type & Category
     name: Performance by Type & Category
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_grid
     fields: [blended_results.audience_list_type, performance_temp.total_impressions,
@@ -1775,7 +1775,7 @@
     default_value: '2020'
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.date_date
@@ -1785,7 +1785,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.advertiser
@@ -1798,7 +1798,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.audience_list_category
@@ -1811,7 +1811,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: blended_results.audience_list_type
@@ -1821,7 +1821,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: [Advertiser, List Category, List Type]
     field: performance_temp.insertion_order
@@ -1832,7 +1832,7 @@
   elements:
   - title: Performance by Type
     name: Performance by Type
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_grid
     fields: [blended_results.audience_list_type, performance_temp.audience_list, performance_temp.total_potential_impressions,
@@ -1914,7 +1914,7 @@
     height: 7
   - title: Audiences Headroom & CRM
     name: Audiences Headroom & CRM
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     type: looker_scatter
     fields: [performance_temp.audience_list, performance_temp.total_potential_impressions,
@@ -1971,7 +1971,7 @@
     default_value: 30 days
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.date_date
@@ -1981,7 +1981,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.advertiser
@@ -1994,7 +1994,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: performance_temp.audience_list_category
@@ -2007,7 +2007,7 @@
     ui_config:
       type: button_group
       display: inline
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: []
     field: blended_results.audience_list_type
@@ -2017,7 +2017,7 @@
     default_value: ''
     allow_multiple_values: true
     required: false
-    model: dv360
+    model: Looker_Demo_dv360
     explore: performance_temp
     listens_to_filters: [Advertiser, List Category, List Type]
     field: performance_temp.insertion_order

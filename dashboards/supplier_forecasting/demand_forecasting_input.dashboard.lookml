@@ -5,7 +5,7 @@
   elements:
   - title: Today vs 90 Days Prior
     name: Today vs 90 Days Prior
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.week_start_week, subtract_30_back_365_days.sum_ordered_per_week,
@@ -83,7 +83,7 @@
     height: 2
   - title: Today vs 365 Days Prior
     name: Today vs 365 Days Prior
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.week_start_week, supply_forecasting_raw.sum_ordered_per_week,
@@ -137,7 +137,7 @@
     height: 8
   - title: Today vs Same Month Last Year
     name: Today vs Same Month Last Year
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.week_start_week, supply_forecasting_raw.sum_ordered_per_week,
@@ -191,7 +191,7 @@
     height: 8
   - title: Today vs Same Quarter Last Year
     name: Today vs Same Quarter Last Year
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.week_start_week, supply_forecasting_raw.sum_ordered_per_week,
@@ -245,7 +245,7 @@
     height: 8
   - title: Today vs Growth in Last 2 Months
     name: Today vs Growth in Last 2 Months
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.week_start_week, supply_forecasting_raw.sum_ordered_per_week,
@@ -299,7 +299,7 @@
     height: 8
   - title: Today vs Growth in Last Year
     name: Today vs Growth in Last Year
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.week_start_week, supply_forecasting_raw.sum_ordered_per_week,
@@ -353,7 +353,7 @@
     height: 8
   - title: Search Traffic for SKU - 2 Weeks Prior
     name: Search Traffic for SKU - 2 Weeks Prior
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.sum_ordered_per_week, supply_forecasting_raw.sum_search_traffic_sku_14,
@@ -401,7 +401,7 @@
     height: 8
   - title: Search Traffic for SKU - 4 Weeks Prior
     name: Search Traffic for SKU - 4 Weeks Prior
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.sum_ordered_per_week, supply_forecasting_raw.week_start_week,
@@ -457,7 +457,7 @@
     height: 2
   - title: Search Traffic for Competitor SKU - 2 Weeks Prior
     name: Search Traffic for Competitor SKU - 2 Weeks Prior
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.sum_ordered_per_week, supply_forecasting_raw.week_start_week,
@@ -512,7 +512,7 @@
     height: 2
   - title: Medicare - Eye Care Spend
     name: Medicare - Eye Care Spend
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.sum_ordered_per_week, supply_forecasting_raw.week_start_week,
@@ -560,7 +560,7 @@
     height: 8
   - title: Medicare - Eye Care Visits
     name: Medicare - Eye Care Visits
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.sum_ordered_per_week, supply_forecasting_raw.week_start_week,
@@ -608,7 +608,7 @@
     height: 8
   - title: "% Population over 30"
     name: "% Population over 30"
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     type: looker_scatter
     fields: [supply_forecasting_raw.sum_ordered_per_week, supply_forecasting_raw.week_start_week,
@@ -661,7 +661,7 @@
     default_value: national
     allow_multiple_values: true
     required: false
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     listens_to_filters: []
     field: supply_forecasting_raw.map_level
@@ -671,7 +671,7 @@
     default_value: "-Undefined"
     allow_multiple_values: true
     required: false
-    model: supplier_forecasting
+    model: Looker_Demo_supplier_forecasting
     explore: supply_forecasting_raw
     listens_to_filters: []
     field: sku_buckets.sku_category

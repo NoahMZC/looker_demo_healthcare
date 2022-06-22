@@ -5,7 +5,7 @@
   elements:
   - title: Age Tier
     name: Age Tier
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [patient.age_tier]
@@ -30,7 +30,7 @@
     height: 2
   - title: Gender
     name: Gender
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [patient.gender]
@@ -68,7 +68,7 @@
     height: 2
   - title: Race
     name: Race
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [patient.us_core_race]
@@ -93,7 +93,7 @@
     height: 2
   - title: Wellness Screened in the Past Year
     name: Wellness Screened in the Past Year
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [patient.is_wellness_screened_in_the_past_year]
@@ -131,7 +131,7 @@
     height: 2
   - title: Hospital
     name: Hospital
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [organization__address.city, organization__address.state, organization__address.postal_code]
@@ -169,7 +169,7 @@
     height: 2
   - title: Blood Pressure
     name: Blood Pressure
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_line
     fields: [observation_vitals.issued_date, observation_vitals.average_quantity]
@@ -225,7 +225,7 @@
     height: 5
   - title: BMI
     name: BMI
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: observation_vitals
     type: looker_line
     fields: [observation_vitals.issued_date, observation_vitals.average_quantity]
@@ -285,7 +285,7 @@
     height: 5
   - title: Average Length Of Stay
     name: Average Length Of Stay
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: single_value
     fields: [encounter.average_los]
@@ -393,7 +393,7 @@
     height: 2
   - title: Diagnosis Report History
     name: Diagnosis Report History
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: patient_encounter
     type: looker_grid
     fields: [diagnostic_report.dateTime_date, diagnostic_report__code__coding.code,
@@ -451,7 +451,7 @@
     height: 4
   - title: Patient Encounter History
     name: Patient Encounter History
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_scatter
     fields: [healthcare_days_since_readmission.readmission_within_7, encounter.count,
@@ -510,7 +510,7 @@
     height: 4
   - title: Readmission Report
     name: Readmission Report
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: looker_grid
     fields: [patient.name, encounter.period__start_date, encounter.period__end_date,
@@ -577,7 +577,7 @@
     height: 5
   - title: Primary Language
     name: Primary Language
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [patient__communication.language__text]
@@ -630,7 +630,7 @@
     height: 2
   - title: Patient Name
     name: Patient Name
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [patient.name]
@@ -710,7 +710,7 @@
     height: 4
   - title: Avg Readmission Rate Score
     name: Avg Readmission Rate Score
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [bqml_predict.encounter_id, bqml_predict.encounter__reason__coding_display,
@@ -763,7 +763,7 @@
     height: 2
   - title: Number of Visits
     name: Number of Visits
-    model: healthcare
+    model: Looker_Demo_healthcare
     explore: encounter_extended
     type: single_value
     fields: [encounter.count]
