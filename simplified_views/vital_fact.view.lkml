@@ -1,5 +1,5 @@
 view: vital_fact {
-  sql_table_name: `looker-private-demo.healthcare_demo_live.vital_fact` ;;
+  sql_table_name: `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.vital_fact` ;;
   # sql_table_name: ${observation_vitals_average_standard_dev_pdt.SQL_TABLE_NAME} ;;
 
   dimension: vital_type {

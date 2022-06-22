@@ -11,8 +11,8 @@ view: healthcare_days_since_readmission {
         WHEN DATE_DIFF(DATE((encounter.period).end , 'America/Los_Angeles'), LAG(DATE((encounter.period).end),1) OVER (PARTITION BY patient.id ORDER BY DATE((encounter.period).start , 'America/Los_Angeles') ASC), DAY) > 7 THEN FALSE
         ELSE NULL
         END) as readmission_within_7
-    FROM `looker-private-demo.healthcare_demo_live.encounter`  AS encounter
-    LEFT JOIN `looker-private-demo.healthcare_demo_live.patient`  AS patient ON ((encounter.subject).patientId) = patient.id;;
+    FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.encounter`  AS encounter
+    LEFT JOIN `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.patient`  AS patient ON ((encounter.subject).patientId) = patient.id;;
   }
 
   measure: count {

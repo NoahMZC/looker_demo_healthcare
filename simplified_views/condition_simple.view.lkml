@@ -1,5 +1,5 @@
 view: condition_simple {
-  sql_table_name: `looker-private-demo.healthcare_demo_live.simple_condition` ;;
+  sql_table_name: `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.simple_condition` ;;
   drill_fields: [id]
 
   dimension: id {

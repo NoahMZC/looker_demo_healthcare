@@ -5,7 +5,7 @@ view: healthcare_bqml_input {
             WHEN DATE_DIFF(discharge_date, last_discharge_date, DAY) > 7 THEN FALSE
             ELSE NULL
             END) as readmission_within_7
-          FROM `looker-private-demo.healthcare_demo_live.bqml_input`
+          FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.bqml_input`
           WHERE EXTRACT(YEAR FROM discharge_date) > 2018 and EXTRACT(YEAR FROM discharge_date) <= 2020) ;;
   }
 }
@@ -24,7 +24,7 @@ view: healthcare_bqml_fit {
 view: healthcare_bqml_predict {
   derived_table: {
     persist_for: "48 hours"
-    sql:SELECT * FROM ML.PREDICT(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier`,
+    sql:SELECT * FROM ML.PREDICT(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier`,
                 (
                   with CTE as (
                   SELECT *,
@@ -32,7 +32,7 @@ view: healthcare_bqml_predict {
                       WHEN DATE_DIFF(discharge_date, last_discharge_date, DAY) > 7 THEN FALSE
                       ELSE NULL
                       END) as readmission_within_7
-                  FROM `looker-private-demo.healthcare_demo_live.bqml_input`
+                  FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.bqml_input`
                   WHERE EXTRACT(YEAR FROM discharge_date) > 2020)
                   SELECT * FROM CTE
                   WHERE readmission_within_7 IS NOT NULL
@@ -401,7 +401,7 @@ view: healthcare_bqml_predict {
 
 
 view: healthcare_bqml_new_patients {
-  sql_table_name: looker-private-demo.healthcare_demo_live.new_patient_visits ;;
+  sql_table_name: mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.new_patient_visits ;;
 
   dimension: patient_id {
     type: string
@@ -749,14 +749,14 @@ view: healthcare_bqml_new_patient_predictions {
           SELECT
               *
             FROM
-              ML.PREDICT(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier`,
+              ML.PREDICT(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier`,
                 (
                 WITH
                   CTE AS (
                   SELECT
                     *
                   FROM
-                    `looker-private-demo.healthcare_demo_live.new_patient_visits`
+                    `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.new_patient_visits`
                   WHERE
                     patient_name = "Alick Zhang")
                 SELECT
@@ -780,7 +780,7 @@ view: prediction_probs {
 view: new_patient_info_schema {
   derived_table: {
     sql: SELECT *
-      FROM looker-private-demo.healthcare_demo_live.INFORMATION_SCHEMA.COLUMNS
+      FROM mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.INFORMATION_SCHEMA.COLUMNS
       WHERE table_name = 'new_patient_visits'
       ;;
   }

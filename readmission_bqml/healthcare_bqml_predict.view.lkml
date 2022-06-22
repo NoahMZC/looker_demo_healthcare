@@ -26,10 +26,10 @@ view: healthcare_bqml_input1 {
       ELSE 'Undefined'
       END AS patient_age_tier,
               (CASE WHEN (CONCAT((regexp_replace(patient.name[Offset(0)].given[Offset(0)],'[0-9]','')), ' ',(regexp_replace(patient.name[Offset(0)].family,'[0-9]','')))) IN( SELECT (CONCAT((regexp_replace(patient.name[Offset(0)].given[Offset(0)],'[0-9]','')), ' ',(regexp_replace(patient.name[Offset(0)].family,'[0-9]',''))))
-                                    FROM `looker-private-demo.healthcare_demo_live.encounter`  AS encounter
+                                    FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.encounter`  AS encounter
                                     LEFT JOIN UNNEST(encounter.type) as encounter__type
                                     LEFT JOIN UNNEST(encounter__type.coding) as encounter__type__coding
-                                    LEFT JOIN `looker-private-demo.healthcare_demo_live.patient`  AS patient ON encounter.subject.patientId = patient.id
+                                    LEFT JOIN `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.patient`  AS patient ON encounter.subject.patientId = patient.id
 
       WHERE (encounter.period.start ) >= ((TIMESTAMP(FORMAT_TIMESTAMP('%F %H:%M:%E*S', TIMESTAMP_ADD(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %H:%M:%E*S', CURRENT_TIMESTAMP(), 'America/Los_Angeles')), DAY), INTERVAL -364 DAY)), 'America/Los_Angeles')))
       AND (encounter.period.start ) < ((TIMESTAMP(FORMAT_TIMESTAMP('%F %H:%M:%E*S', TIMESTAMP_ADD(TIMESTAMP_ADD(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %H:%M:%E*S', CURRENT_TIMESTAMP(), 'America/Los_Angeles')), DAY), INTERVAL -364 DAY), INTERVAL 365 DAY)), 'America/Los_Angeles')))
@@ -324,7 +324,7 @@ view: healthcare_bqml_input1 {
       END) as readmission_within_7
 
 
-      FROM `looker-private-demo.healthcare_demo_live.encounter`  AS encounter
+      FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.encounter`  AS encounter
       LEFT JOIN UNNEST((-- spectacles: ignore
       encounter.participant
       )) as encounter__participant
@@ -340,14 +340,14 @@ view: healthcare_bqml_input1 {
       LEFT JOIN UNNEST((-- spectacles: ignore
       encounter__type.coding
       )) as encounter__type__coding
-      LEFT JOIN `looker-private-demo.healthcare_demo_live.patient`  AS patient ON ((-- spectacles: ignore
+      LEFT JOIN `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.patient`  AS patient ON ((-- spectacles: ignore
       encounter.subject
       ).patientId
       ) = patient.id
       LEFT JOIN UNNEST((-- spectacles: ignore
       patient.address
       )) as patient__address
-      LEFT JOIN `looker-private-demo.healthcare_demo_live.observation`  AS observation ON ((-- spectacles: ignore
+      LEFT JOIN `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.observation`  AS observation ON ((-- spectacles: ignore
       observation.context
       ).encounterId
       ) = encounter.id
@@ -355,7 +355,7 @@ view: healthcare_bqml_input1 {
       observation.category
       )) as observation__category
       LEFT JOIN UNNEST(observation__category.coding) as observation__category__coding
-      LEFT JOIN `looker-private-demo.healthcare_demo_live.practitioner`  AS practitioner ON practitioner.id = ((-- spectacles: ignore
+      LEFT JOIN `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.practitioner`  AS practitioner ON practitioner.id = ((-- spectacles: ignore
       encounter__participant.individual
       ).practitionerId
       )
@@ -367,7 +367,7 @@ view: healthcare_bqml_input1 {
 
 view: healthcare_bqml_eval1 {
   derived_table: {
-    sql: SELECT * FROM ML.EVALUATE(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier3`,
+    sql: SELECT * FROM ML.EVALUATE(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier3`,
               (
               SELECT *
               FROM ${healthcare_bqml_input1.SQL_TABLE_NAME}
@@ -427,7 +427,7 @@ view: healthcare_bqml_eval1 {
 
 view: healthcare_training_info1 {
   derived_table: {
-    sql:  SELECT * FROM ML.TRAINING_INFO(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier3`);;
+    sql:  SELECT * FROM ML.TRAINING_INFO(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier3`);;
   }
 
   dimension: training_run {

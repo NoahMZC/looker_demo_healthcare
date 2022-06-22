@@ -2,7 +2,7 @@
 # unnested arrays are included as view with their own dimensions below
 
 view: patient {
-  sql_table_name: `looker-private-demo.healthcare_demo_live.patient` ;;
+  sql_table_name: `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.patient` ;;
   drill_fields: [id]
 
   #########  Standard dimensions  #########
@@ -214,10 +214,10 @@ view: patient {
   dimension: is_wellness_screened_in_the_past_year {
     type: yesno
     sql: ${name} IN( SELECT ${name}
-                              FROM `looker-private-demo.healthcare_demo_live.encounter`  AS encounter
+                              FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.encounter`  AS encounter
                               LEFT JOIN UNNEST(encounter.type) as encounter__type
                               LEFT JOIN UNNEST(encounter__type.coding) as encounter__type__coding
-                              LEFT JOIN `looker-private-demo.healthcare_demo_live.patient`  AS patient ON encounter.subject.patientId = patient.id
+                              LEFT JOIN `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.patient`  AS patient ON encounter.subject.patientId = patient.id
 
       WHERE (encounter.period.start ) >= ((TIMESTAMP(FORMAT_TIMESTAMP('%F %H:%M:%E*S', TIMESTAMP_ADD(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %H:%M:%E*S', CURRENT_TIMESTAMP(), 'America/Los_Angeles')), DAY), INTERVAL -364 DAY)), 'America/Los_Angeles')))
       AND (encounter.period.start ) < ((TIMESTAMP(FORMAT_TIMESTAMP('%F %H:%M:%E*S', TIMESTAMP_ADD(TIMESTAMP_ADD(TIMESTAMP_TRUNC(TIMESTAMP(FORMAT_TIMESTAMP('%F %H:%M:%E*S', CURRENT_TIMESTAMP(), 'America/Los_Angeles')), DAY), INTERVAL -364 DAY), INTERVAL 365 DAY)), 'America/Los_Angeles')))

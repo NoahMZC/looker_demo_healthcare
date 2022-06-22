@@ -1,6 +1,6 @@
 view: healthcare_feature_info {
   derived_table: {
-    sql: SELECT * FROM ML.FEATURE_INFO(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier`) ;;
+    sql: SELECT * FROM ML.FEATURE_INFO(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier`) ;;
   }
 
   dimension: input {
@@ -16,7 +16,7 @@ view: healthcare_feature_info {
 
 view: healthcare_training_info {
   derived_table: {
-    sql:  SELECT * FROM ML.TRAINING_INFO(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier`);;
+    sql:  SELECT * FROM ML.TRAINING_INFO(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier`);;
   }
 
   dimension: training_run {
@@ -53,7 +53,7 @@ view: healthcare_training_info {
 
 view: healthcare_bqml_eval {
   derived_table: {
-    sql: SELECT * FROM ML.EVALUATE(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier`,
+    sql: SELECT * FROM ML.EVALUATE(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier`,
             (
             with CTE as (
             SELECT *,
@@ -61,7 +61,7 @@ view: healthcare_bqml_eval {
                  WHEN DATE_DIFF(discharge_date, last_discharge_date, DAY) > 7 THEN FALSE
                  ELSE NULL
                  END) as readmission_within_7
-             FROM `looker-private-demo.healthcare_demo_live.bqml_input`
+             FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.bqml_input`
              WHERE EXTRACT(YEAR FROM discharge_date) > 2028)
              SELECT * FROM CTE
              WHERE readmission_within_7 IS NOT NULL
@@ -113,7 +113,7 @@ view: healthcare_bqml_eval {
 view: healthcare_bqml_matrix_seen{
   derived_table: {
     persist_for: "24 hours"
-    sql: SELECT *, "seen" as data_type FROM ML.CONFUSION_MATRIX(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier`);;
+    sql: SELECT *, "seen" as data_type FROM ML.CONFUSION_MATRIX(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier`);;
   }
   dimension: expected_label {}
   dimension: false { type: number }
@@ -124,7 +124,7 @@ view: healthcare_bqml_matrix_seen{
 view: healthcare_bqml_matrix_unseen {
   derived_table: {
     persist_for: "24 hours"
-    sql: SELECT *, "unseen" as data_type FROM ML.CONFUSION_MATRIX(MODEL `looker-private-demo.healthcare_demo_live.automl_classifier`,
+    sql: SELECT *, "unseen" as data_type FROM ML.CONFUSION_MATRIX(MODEL `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier`,
             (
             with CTE as (
             SELECT *,
@@ -132,7 +132,7 @@ view: healthcare_bqml_matrix_unseen {
                  WHEN DATE_DIFF(discharge_date, last_discharge_date, DAY) > 7 THEN FALSE
                  ELSE NULL
                  END) as readmission_within_7
-             FROM `looker-private-demo.healthcare_demo_live.bqml_input`
+             FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.bqml_input`
              WHERE EXTRACT(YEAR FROM discharge_date) > 2020)
              SELECT * FROM CTE
              WHERE readmission_within_7 IS NOT NULL
@@ -148,7 +148,7 @@ view: healthcare_bqml_matrix_unseen {
 view: healthcare_bqml_roc {
   derived_table: {
     persist_for: "48 hours"
-    sql: SELECT * FROM ML.ROC_CURVE(model `looker-private-demo.healthcare_demo_live.automl_classifier`,
+    sql: SELECT * FROM ML.ROC_CURVE(model `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.automl_classifier`,
             (
             with CTE as (
             SELECT *,
@@ -156,7 +156,7 @@ view: healthcare_bqml_roc {
                  WHEN DATE_DIFF(discharge_date, last_discharge_date, DAY) > 7 THEN FALSE
                  ELSE NULL
                  END) as readmission_within_7
-             FROM `looker-private-demo.healthcare_demo_live.bqml_input`
+             FROM `mzcdsc-team-200716.Looker_Demo_healthcare_demo_live.bqml_input`
              WHERE EXTRACT(YEAR FROM discharge_date) > 2020)
              SELECT * FROM CTE
              WHERE readmission_within_7 IS NOT NULL
