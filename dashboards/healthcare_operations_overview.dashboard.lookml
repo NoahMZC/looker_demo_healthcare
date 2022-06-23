@@ -567,7 +567,7 @@
     name: Readmission Causes
     model: Looker_Demo_healthcare
     explore: readmission
-    type: sankey
+    type: marketplace_viz_sankey::sankey-marketplace
     fields: [prior_condition__code__coding.display, condition__code__coding.display,
       readmission.count_readmissions]
     filters:
